@@ -1,0 +1,363 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    background-color: #0f172a;
+}
+
+header{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    background-color: #1e293b;
+    color: #fefefe;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 100px;
+    border-bottom: 2px solid #334155;
+
+    .headerTitle{
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        svg{
+            height:60px;
+            fill: #fefefe;
+        }
+
+        h1{
+            font-size: 35px;
+        }
+    }
+
+    p{
+        font-size: 20px;
+
+        a{
+            color: #fefefe;
+        }
+    }
+}
+
+section{
+    display: flex;
+}
+
+aside{
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    background-color: #1e293b;
+    border-right: 2px solid #334155;
+    width: 300px;
+    height: 817px;
+
+    .asideTitle{
+        display: flex;
+        align-items: center;
+        color: #fefefe;
+        gap: 10px;
+        margin-bottom: 30px;
+        svg{
+            height: 30px;
+            fill: #fefefe;
+        }
+
+        h1{
+            font-size: 20px;
+        }
+    }
+
+    button{
+        padding: 10px 20px;
+        font-size: 20px;
+        background-color: #3b82f6;
+        border: none;
+        color: #fefefe;
+        border-radius: 10px;
+        transition: 0.3s;
+        cursor: pointer;
+    }
+
+    button:hover{
+        background-color: #2563eb;
+    }
+}
+
+#todoWrapper{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    color: #fefefe;
+    padding: 100px;
+
+    .projectTitleWrapper{
+        h1{
+            font-size: 40px;
+            margin-bottom: 50px;
+        }
+    }
+
+    span{
+        margin: 50px;
+        align-self: center;
+    }
+
+    button{
+        padding: 10px 20px;
+        font-size: 20px;
+        background-color: #3b82f6;
+        border: none;
+        color: #fefefe;
+        border-radius: 10px;
+        transition: 0.3s;
+        cursor: pointer;
+    }
+
+    button:hover{
+        background-color: #2563eb;
+    }
+}
+
+#todoDialog{
+    padding: 20px;
+    border: 2px solid;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    text-align: center;
+
+    h1{
+        font-size: 35px;
+        margin-bottom: 20px;
+    }
+
+    .todoInput{
+        display: flex;
+        flex-direction: column;
+        margin: 20px 0;
+
+        label{
+            font-size: 25px;
+            margin: 10px 0;
+            text-align: start;
+        }
+
+        input{
+            font-size: 18px;
+            padding: 10px 20px;
+            border-radius: 10px;
+        }
+    }
+
+    select{
+        font-size: 18px;
+        padding: 10px 20px;
+        border-radius: 10px;
+    }
+
+    .newTodoBtn{
+        button{
+            padding: 10px 20px;
+            font-size: 18px;
+            border: none;
+            border-radius: 10px;
+            transition: 0.3s;
+            color: #fefefe;
+            cursor: pointer;
+        }
+
+        #closeNewTodoBtn{
+            background-color: #dc2626;
+        }
+
+        #closeNewTodoBtn:hover{
+            background-color: #b91c1c;
+        }
+
+        #AddNewTodoBtn{
+            background-color: #3b82f6;
+        }
+
+        #AddNewTodoBtn:hover{
+            background-color: #2563eb;
+        }
+    }
+}
+
+#newProjectDialog{
+    padding: 20px;
+    border: 2px solid;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    text-align: center;
+    h1{
+        font-size: 35px;
+        margin-bottom: 20px;
+    }
+
+    .projectInput{
+        display: flex;
+        flex-direction: column;
+        margin: 20px 0;
+
+        label{
+            font-size: 25px;
+            margin: 10px 0;
+            text-align: start;
+        }
+
+        input{
+            font-size: 20px;
+            padding: 10px 20px;
+            border-radius: 10px;
+        }
+    }
+
+    .newProjectBtn{
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+
+        button{
+            padding: 10px 20px;
+            font-size: 18px;
+            border: none;
+            border-radius: 10px;
+            transition: 0.3s;
+            color: #fefefe;
+            cursor: pointer;
+        }
+
+        #closeNewProjectBtn{
+            background-color: #dc2626;
+        }
+
+        #closeNewProjectBtn:hover{
+            background-color: #b91c1c;
+        }
+
+        #AddNewProjectBtn{
+            background-color: #3b82f6;
+        }
+
+        #AddNewProjectBtn:hover{
+            background-color: #2563eb;
+        }
+        
+    }
+}
+
+#projectContainer{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    row-gap: 20px;
+
+    .newProjectWrapper{
+        display: flex;
+        align-items: center;
+        column-gap: 20px;
+
+        .newProject{
+            width: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+    
+            h1{
+                font-size: 20px;
+            }
+        }
+
+        #deleteProjectBtn {
+            fill: #fefefe;
+            cursor: pointer;
+            pointer-events: auto;
+            background-color: #dc2626;
+            height: 43px;
+            align-items: center;
+
+            svg{
+                align-self: center;
+                cursor: pointer;
+                height: 25px;
+            }
+        }
+
+        #deleteProjectBtn:hover{
+            background-color: #b91c1c;
+        }
+    }
+
+}
+
+.todoItemWrapper{
+    display: flex;
+    height: 130px;
+    padding: 10px 50px;
+    align-items: center;
+    justify-content: space-between;
+    border: 2px solid #fefefe;
+    margin-bottom: 30px;
+    border-radius: 20px;
+
+    .textWrapper{
+        width: 170px;
+
+        h1{
+            font-size: 28px;
+            margin-bottom: 5px;
+        }
+        p{
+            font-size: 20px;
+        }
+
+    }
+
+    .dateWrapper{
+        display: flex;
+        gap: 70px;
+
+        p{
+            font-size: 20px;
+        }
+
+    }
+
+    .todoDeleteBtnWrapper{
+        .delBtn{
+            padding: 10px 20px;
+            border: none;
+            border-radius: 10px;
+            transition: 0.3s;
+            color: #fefefe;
+            cursor: pointer;
+
+            svg{
+                height: 30px;
+                fill: #fefefe;
+            }
+        }
+
+        .delBtn{
+            background-color: #dc2626;
+        }
+
+        .delBtn:hover{
+            background-color: #b91c1c;
+        }
+
+    }
+}

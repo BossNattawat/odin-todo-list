@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+</head>
+<body>
+    
+    <header>
+        <div class="headerTitle">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>notebook-check</title><path d="M16.75 22.16L14 19.16L15.16 18L16.75 19.59L20.34 16L21.5 17.41L16.75 22.16M3 7V5H5V4C5 2.89 5.9 2 7 2H13V9L15.5 7.5L18 9V2H19C20.05 2 21 2.95 21 4V13.8C20.12 13.29 19.09 13 18 13C14.69 13 12 15.69 12 19C12 20.09 12.29 21.12 12.8 22H7C5.95 22 5 21.05 5 20V19H3V17H5V13H3V11H5V7H3M5 5V7H7V5H5M5 19H7V17H5V19M5 13H7V11H5V13Z" /></svg>
+            <h1>To-Do List</h1>
+        </div>
+        <p>©2024 <a href="https://github.com/BossNattawat">BossNattawat</a></p>
+    </header>
+
+    <section id="mainContainer">
+        <aside>
+            <div class="asideTitle">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>format-list-bulleted-square</title><path d="M3,4H7V8H3V4M9,5V7H21V5H9M3,10H7V14H3V10M9,11V13H21V11H9M3,16H7V20H3V16M9,17V19H21V17H9" /></svg>
+                <h1>My Projects</h1>
+            </div>
+    
+            <div id="projectContainer">
+    
+            </div>
+            <button id="newProjectBtn">Add New +</button>
+        </aside>
+
+        <dialog id="newProjectDialog">
+            <h1>Add Project</h1>
+            <form id="projectNameForm">
+                <div class="projectInput">
+                    <label for="projectName">Project Name</label>
+                    <input type="text" id="projectName" placeholder="Project Name">
+                </div>
+                <div class="newProjectBtn">
+                    <button id="closeNewProjectBtn">Close</button>
+                    <button id="AddNewProjectBtn" type="submit">Add Project</button>
+                </div>
+            </form>
+        </dialog>
+    
+        <main id="todoWrapper">
+
+            <dialog id="todoDialog">
+                <h1>New Todo</h1>
+                <form>
+                    <div class="todoInput">
+                        <label for="TaskName">Task Name</label>
+                        <input type="text" id="taskName" placeholder="Task Name">
+                        <label for="TaskDes">Description</label>
+                        <input type="text" id="description" placeholder="Description">
+                        <label for="DouDate">Dou Date</label>
+                        <input type="date" name="date" id="dueDate">
+
+                        <label for="Priority">Priority</label>
+                        <select id="priority">
+                            <option value="Low">Low</option>
+                            <option value="Medium">Medium</option>
+                            <option value="High">High</option>
+                        </select>
+                    </div>
+
+                    <div class="newTodoBtn">
+                        <button id="closeNewTodoBtn">Close</button>
+                        <button id="AddNewTodoBtn" type="submit">Add Project</button>
+                    </div>
+                </form>
+            </dialog>
+
+            <div class="projectTitleWrapper">
+                <h1 id="projectTitleTodo"></h1>
+            </div>
+            <div class="todoContainer">
+                
+            </div>
+            <span>
+                <button id="addTodoBtn">Add New +</button>
+            </span>
+            
+        </main>
+    </section>
+
+</body>
+</html>
