@@ -55,7 +55,8 @@ aside{
     background-color: #1e293b;
     border-right: 2px solid #334155;
     width: 300px;
-    height: 817px;
+    /* height: 817px; */
+    height: calc(100vh - 100px);
 
     .asideTitle{
         display: flex;
@@ -328,7 +329,8 @@ aside{
 
     .dateWrapper{
         display: flex;
-        gap: 70px;
+        gap: 60px;
+        margin: 0 30px;
 
         p{
             font-size: 20px;
